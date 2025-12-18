@@ -1,0 +1,48 @@
+// Variáveis globais
+
+// Paleta principal
+$primary-color: #3498db;   // azul padrão
+$secondary-color: #e35678; // rosa/vermelho de destaque
+$blue: #3498db;            // azul adicional para compatibilidade
+$accent-color: #ffcc00;//amarelo vibrante 
+
+// Paleta de fundo
+$dark-bg: #121212;
+$light-bg: #f9f9f9;
+
+// Texto
+$text-dark: #333;
+$text-light: #fff;
+
+// Tipografia
+$font-size-small: 0.9rem;
+$font-size-base: 1rem;
+$font-size-large: 1.7rem;
+$font-size-xlarge: 2.2rem;
+
+// Espaçamento
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Bordas
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+
+// Temas (sem namespace aqui!)
+$theme-light: (
+  background: $light-bg,
+  text: $text-dark,
+  primary: $primary-color,
+  secondary: $secondary-color
+);
+
+$theme-dark: (
+  background: $dark-bg,
+  text: $text-light,
+  primary: $primary-color,
+  secondary: $secondary-color
+);

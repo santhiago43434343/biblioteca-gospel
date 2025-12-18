@@ -1,0 +1,465 @@
+// Definição da animação de gradiente
+/*
+OPÇÕES PARA TROCA DE PALETA DE CORES SASS CSS 
+GRADIENTE::
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.biblioteca {
+  min-height: 100vh;        // ocupa toda a altura da tela
+  width: 100%;              // ocupa toda a largura
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+
+  // fundo colorido e animado
+  background: linear-gradient(135deg, #667eea, #764ba2, #ff9a9e, #fad0c4);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+::::::::::::::::::::::::::::
+
+TROPICAL ALEGRE E VIBRANTE, BASTA ALTERAR O CAMPO 
+.BIBLIOTECA
+
+.biblioteca {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+  padding: 2rem;
+}
+
+::::::::::::::::::::::::::::
+
+MINIMALISTA & ELEGANTE 
+.biblioteca {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #d9a7c7, #fffcdc);
+  background-size: cover;
+  padding: 2rem;
+
+*/
+
+/* gradiente ou animação de fundo da pagina em 
+componente biblioteca*/
+
+
+/*ANIMAÇÃO PARA CARD COM DESCRIÇÃO AO PASSAR CURSOR 
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+
+
+ //OCULTAR DESCRIÇÃO AO REMOVER CURSOR DE CARD
+  .description {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+  }
+
+ // EFEITO AO PASSAR O MOUSE
+  &:hover {
+   transform: scale(1.2) rotate(2deg); 
+   box-shadow: 0 8px 20px rgba(0,0,0,0.25); 
+   
+   .description {
+     opacity: 1; 
+     max-height: 200px;
+      margin-top: 0.5rem; 
+    } 
+} 
+    
+    img { 
+    max-width: 220px;
+     border-radius: 6px; 
+     margin-bottom: 1rem; 
+     transition: transform 0.4s ease; 
+     
+&:hover {
+ transform: scale(1.3) rotate(-2deg); 
+
+  }
+ }
+ .album-title { 
+    font-family: 'Dancing Script', cursive; 
+    font-size: 1.5rem;
+     margin-top: 0.5rem; 
+     transition: color 0.3s ease; 
+    }
+ }
+FIM DO ALGORITMO PARA DESCRIÇÃO AO DESLIZAR CURSOR EM CARD*/
+
+
+/*CONFIGURAÇÃO PARA VERSICULO EM BIBLIOTECA.COMPONENT*/
+
+.versiculo-bloco {
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec); // fundo tropical suave
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.versiculo-titulo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #d81b60; // rosa escuro
+  margin-bottom: 1rem;
+}
+
+.versiculo-texto {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #1a237e; // azul forte
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.versiculo-botao {
+  background-color: #3949ab; // azul vibrante
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #5c6bc0;
+    transform: scale(1.05);
+  }
+}
+
+
+
+/*FIM DO TRECHO DE CONFIGURAÇÃO PARA VERSICULO EM 
+BIBLIOTECA.COMPONENT*/
+
+
+
+
+
+
+
+
+
+
+
+/*FAIXA SUPERIOR COM DESCRIÇÃO, BEM VINDO A BIBLIOTECA GOSPEL*/
+ .top-banner {
+  background: linear-gradient(90deg, #6a1b9a, #8e24aa, #ab47bc);
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  border-radius: 0 0 20px 20px;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .home-button {
+    background-color: #ffffff;
+    color: #6a1b9a;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #f3e5f5;
+      transform: scale(1.05);
+    }
+  }
+}
+/*FIM DO CODIGO DE FAIXA SUPERIOR COM DESCRIÇÃO*/
+
+
+/* INICIO DE TESTES COM POP UP LATERAL COM DESCRIÇÃO EM 
+BIBLIOTECA.COMPONENT*/
+.image-card {
+  position: relative;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+    .popup-side {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  img {
+    max-width: 220px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .album-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  /* pop-up lateral */
+  .popup-side {
+  position: absolute;
+  top: 0;
+  left: 105%; /* aparece ao lado direito do card */
+  background: #6a1b9a; /* cor roxa escura, você pode trocar por qualquer cor */
+  color: #fff;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  width: 240px;
+  text-align: left;
+  font-size: 1.1rem; /* aumenta o tamanho da fonte */
+  font-weight: 600;   /* deixa as letras mais marcantes */
+  text-transform: uppercase; /* deixa tudo em maiúsculo */
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10;
+  }
+}
+
+/*FIM DO TESTE COM POP-UP*/
+
+
+/*INICIO DE TESTES COM FUNDO LINEAR ANIMADO*/
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.biblioteca {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  padding: 2rem;
+
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes moveTonearm {
+  0% { transform: rotate(-30deg); }
+  100% { transform: rotate(0deg); }
+}
+/*FIM DE TESTES COM FUNDO LINEAR ANIMADO*/
+
+
+/*INICIO DE FORMAÇÃO DO ICONE DE DISCO ANIMADO*/
+/* movimentação do disco na pagina*/
+.vinil-container {
+  position: fixed; // fixa na tela
+  top: 20px;       // distância do topo
+  right: 20px;     // distância da direita
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  z-index: 1000;   // garante que permanece acima da pilha
+}
+
+
+.vinil { 
+  width: 200px; 
+  height: 200px;
+  border-radius: 50%; 
+  background: radial-gradient(circle at center, #000 60%, #333 100%);
+  position: relative; 
+  animation: spin 4s linear infinite; 
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); 
+} 
+
+.label {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px; 
+  border-radius: 50%;
+  background: #e63946; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; 
+  font-weight: bold;
+  font-family: 'Dancing Script', cursive; 
+  font-size: 1.2rem; 
+} 
+
+.tonearm { 
+  position: absolute;
+  width: 120px;
+  height: 8px; 
+  background: #ccc;
+  top: 40px;
+  right: 60px;
+  transform-origin: right center; 
+  border-radius: 4px; 
+  animation: moveTonearm 3s ease-in-out infinite alternate; 
+
+  &::after { 
+    content: ''; 
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background: #444;
+    border-radius: 50%;
+    right: -10px; 
+    top: -6px; 
+  } 
+}
+
+/*FIM DA FORMAÇÃO DO ICONE DISCO */
+
+/* Animação de gradiente para os cards OS ALBUNS */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  }
+  25% {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  }
+  50% {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  }
+  75% {
+    background: linear-gradient(135deg, #fad0c4, #ffd1ff);
+  }
+  100% {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  }
+}
+
+.biblioteca {
+  display: flex;
+  flex-direction: column;   // empilha os cards
+  align-items: flex-start;  // alinha à esquerda
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  // aplica a animação de gradiente
+  animation: gradientShift 10s ease infinite;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+  &:hover {
+    transform: scale(1.2) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+
+  img {
+    max-width: 220px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s ease;
+
+    &:hover {
+      transform: scale(1.3) rotate(-2deg);
+    }
+  }
+
+  .description {
+    p {
+      font-size: 1rem;
+      color: #333;
+      margin: 0;
+    }
+  }  
+
+  .album-title {
+    font-family: 'Dancing Script', cursive; // fonte estilo letra de mão
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  // Cada álbum com uma tonalidade diferente
+  .album-title.alice {
+    color: #e63946; // vermelho suave
+  }
+
+  .album-title.damares {
+    color: #457b9d; // azul elegante
+  }
+
+  .album-title.lazaro {
+    color: #2a9d8f; // verde água
+  }
+
+  .album-title.voz {
+    color: #f4a261; // laranja quente 
+  }
+}
+/*FIM DO COMPONENTE PARA ANIMAÇÃO DOS CARDS */

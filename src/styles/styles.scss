@@ -1,0 +1,67 @@
+// src/styles/styles.scss
+// Arquivo raiz de estilos globais
+
+// Imports principais
+@use '_variables' as vars;
+@use '_mixins' as mix;
+@use '_base';
+@use "sass:map";
+
+// Tema padrão (claro)
+body {
+  background-color: map.get(vars.$theme-light, background);
+  color: map.get(vars.$theme-light, text);
+  font-family: Arial, sans-serif;
+  font-size: vars.$font-size-base;
+  margin: 0;
+  padding: 0;
+}
+
+// Classe para tema escuro
+.dark-theme {
+  body {
+    background-color: map.get(vars.$theme-dark, background);
+    color: map.get(vars.$theme-dark, text);
+  }
+
+  a {
+    color: map.get(vars.$theme-dark, primary);
+
+    &:hover {
+      color: map.get(vars.$theme-dark, secondary);
+    }
+  }
+
+  button {
+    background-color: map.get(vars.$theme-dark, primary);
+    color: map.get(vars.$theme-dark, text);
+
+    &:hover {
+      background-color: map.get(vars.$theme-dark, secondary);
+    }
+  }
+}
+
+// Estilos globais adicionais
+p {
+  line-height: 1.7;
+  margin: vars.$spacing-md 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: vars.$spacing-lg;
+}
+
+.card {
+  background-color: vars.$light-bg;
+  border-radius: vars.$border-radius-md;
+  padding: vars.$spacing-md;
+  @include mix.box-shadow();
+  @include mix.transition();
+
+  &:hover {
+    @include mix.hover-effect(1.03);
+  }
+}

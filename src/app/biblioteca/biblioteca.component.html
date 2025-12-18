@@ -1,0 +1,60 @@
+<div class="top-banner">
+  <h2>Bem-vindo à Biblioteca Gospel</h2>
+  <p>Sinta se motivado, leve & alegre. Curta nossa pagina 
+  </p>
+
+  
+<!--INICIO::::VERSICULO E INSERÇÃO DE BUTTON PARA DIRECIONAMENTO
+DE WEB PAGE -->
+<div class="versiculo-bloco">
+  <h3 class="versiculo-titulo">Hebreus 10:25 - Bíblia Online (NVI)</h3>
+  <p class="versiculo-texto">
+    “Não deixemos de reunir-nos como igreja, segundo o costume de alguns, mas encorajemo-nos uns aos outros, ainda mais quando vocês vêem que se aproxima o Dia.”
+  </p>
+  <a href="https://www.bibliaonline.com.br/nvi/hb/10/25" target="_blank" class="versiculo-botao">
+    Acessar na Bíblia Online
+  </a>
+</div>
+
+  
+<!--FIM DO TRECHO PARA INSERÇÃO DE BUTTON PARA DIRECIONAMENTO
+DE WEB PAGE -->
+
+
+
+
+
+
+
+
+
+
+  <!-- Botão para voltar a home -->
+  <button routerLink="/">Voltar para Home</button>
+</div>
+ 
+<!--imports para assets , renderização de imagens
+e scssClass para estilização do titulo dos albuns em 
+ biblioteca-->
+<div class="biblioteca">
+ <div class="image-card" *ngFor="let img of images">
+   <img [src]="img.src" [alt]="img.description" />
+   <h2 class="album-title" [ngClass]="img.scssClass">{{ img.description}}</h2>
+ 
+
+   <!--descrição ao inserir cursor em card, animação em texto
+   description para slides ou pop-up para informação breve -->
+   <div class="popup-side">
+  <p>{{img.fullDescription }}</p>
+ </div>
+</div>
+
+<!--CRIAÇÃO DE ANIMAÇÃO PARA "DISCO DE VINIL"
+CONTINUAÇÃO EM SCSS EM biblioteca.component.scss-->
+<div class="vinil-container">
+ <div class="vinil">
+  <div class="label">SOM</div>
+<div class="tonearm">
+  </div>
+ </div>
+</div>

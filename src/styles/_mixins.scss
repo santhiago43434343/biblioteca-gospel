@@ -1,0 +1,41 @@
+// Funções reutilizáveis
+
+// Centralização flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Transição padrão
+@mixin transition($time: 0.3s, $ease: ease) {
+  transition: all $time $ease;
+}
+
+// Sombra suave
+@mixin box-shadow($color: rgba(0,0,0,0.2)) {
+  box-shadow: 0 4px 6px $color;
+}
+
+// Hover com escala e sombra
+@mixin hover-effect($scale: 1.05) {
+  @include transition();
+  &:hover {
+    transform: scale($scale);
+    @include box-shadow();
+  }
+}
+
+// Texto com gradiente
+@mixin text-gradient($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  background-clip: text;          // padrão
+  -webkit-background-clip: text;  // compatibilidade
+  -webkit-text-fill-color: transparent;
+}
+
+// Container arredondado
+@mixin rounded-box($radius: 8px, $padding: 1rem) {
+  border-radius: $radius;
+  padding: $padding;
+}

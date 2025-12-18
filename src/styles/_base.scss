@@ -1,0 +1,51 @@
+// Estilos globais básicos
+@use '_variables' as vars;
+@use '_mixins' as mixins;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: vars.$font-size-base;
+  background-color: vars.$light-bg;
+  color: vars.$text-dark;
+}
+
+// Links
+a {
+  color: vars.$primary-color;
+  text-decoration: none;
+  @include mixins.transition(0.3s);
+
+  &:hover {
+    color: vars.$secondary-color;
+  }
+}
+
+// Cabeçalhos
+h1, h2, h3, h4, h5, h6 {
+  margin: vars.$spacing-md 0 vars.$spacing-sm;
+  font-weight: bold;
+  color: vars.$primary-color;
+}
+
+// Parágrafos
+p {
+  margin: vars.$spacing-md 0;
+  line-height: 1.6;
+}
+
+// Botões globais
+button {
+  padding: vars.$spacing-sm vars.$spacing-md;
+  border-radius: vars.$border-radius-md;
+  border: none;
+  cursor: pointer;
+  background-color: vars.$primary-color;
+  color: vars.$text-light;
+  @include mixins.transition(0.3s);
+
+  &:hover {
+    background-color: vars.$secondary-color;
+  }
+}

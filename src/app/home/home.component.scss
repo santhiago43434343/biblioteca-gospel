@@ -1,0 +1,126 @@
+// APP COMPONENT ESTILOS PARA ELEMENTOS FILHOS
+/*adição de  stylePreprocessorOptions em angular.json
+para eliminar extensão de ../../ nos imports @use
+ou o aliases em @styles onde SASS não entende configuração sob aliases*/
+@use '_variables' as vars;
+@use '_mixins' as mixins;
+
+
+/* INICIO DE CONFIGURAÇÃO PARA HOME ,TRECHO ACIMA 
+INCLUINDO TITLE E PARAGRAPHS 002 & 003 */
+
+.white-banner {
+  background: linear-gradient(135deg, #fff176, #ffd54f, #ffb74d); /* amarelo tropical */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, background 0.8s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffe082, #ffcc80, #ffab91); /* laranja suave ao passar o mouse */
+  }
+
+  .title001 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #d32f2f; /* vermelho forte */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .paragraph002 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2e7d32; /* verde escuro */
+    line-height: 1.7;
+    white-space: pre-line;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .paragraph003 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1565c0; /* azul forte */
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* FIM DO TRECHO DE CONFIGURAÇÃO PARA HOME ,TRECHO
+ACIMA INCLUINDO TITLE E PARAGRAPHS 002 & 003*/
+
+.title001 {
+  color: vars.$primary-color;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  @include mixins.flex-center; // centraliza o título
+}
+
+.paragraph002 {
+  font-size: vars.$font-size-large;
+  color: vars.$blue;
+  line-height: 1.6;
+  padding: 1rem;
+  border-left: 4px solid vars.$secondary-color;
+  background-color: vars.$light-bg;
+}
+
+.paragraph003 {
+  font-size: 1.5rem;
+  color: vars.$secondary-color;
+  font-style: italic;
+  margin: 1rem 0;
+  background: linear-gradient(to right, vars.$primary-color, vars.$blue);
+    //compatibilidade cross-browser
+  background-clip: text;//padrão
+  -webkit-background-clip: text; //prefixado para webkit
+  -webkit-text-fill-color: transparent; // efeito degradê no texto
+}
+
+.paragraph004 {
+  background-color: vars.$dark-bg;
+  font-size: vars.$font-size-large;
+  color: vars.$secondary-color;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: vars.$primary-color;
+    color: #fff;
+    transform: scale(1.05);
+
+       // frase em cima de button::
+    h1{
+      color: #f39c12; //nova cor (laranja, por exemplo)
+      font-size: vars.$font-size-xlarge;
+      margin-bottom: vars.$spacing-md;
+    }
+
+    //botão clique aqui 
+    button {
+      margin-top: vars.$spacing-md; 
+      padding: vars.$spacing-sm vars.$spacing-md;// tamanho padrão do botão
+      font-size: vars.$font-size-xlarge; //aumenta o texto do button xlarge: variavel global
+      border: none;
+      border-radius: vars.$border-radius-sm;
+      background-color: vars.$accent-color; // 
+      color: vars.$text-dark;
+      font-weight: bold;
+      cursor: pointer;
+      @include mixins.transition();
+     
+      &:hover {
+        background-color: vars.$secondary-color;
+        color: vars.$text-light;
+        transform: scale(1.05);
+      }
+    }
+  }
+}
